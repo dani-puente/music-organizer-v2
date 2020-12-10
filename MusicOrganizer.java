@@ -87,8 +87,10 @@ public class MusicOrganizer
      * Muestra todos los archivos en la coleccion
      */
     public void listAllFiles(){
+        int cont = 0;
         for (String filename : files){
-            System.out.println(filename);
+            cont++;
+            System.out.println(cont + ": " + filename);
         } 
     }
 }
