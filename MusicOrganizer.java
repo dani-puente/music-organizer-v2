@@ -93,4 +93,16 @@ public class MusicOrganizer
             System.out.println(cont + ": " + filename);
         } 
     }
+    
+    /**
+     * Muestra los archivos que contengan el parametro
+     */
+    public void listMatching(String busqueda){
+        for(String filename : files){
+            if(filename.contains(busqueda)){
+                System.out.println(filename);
+            }
+        }
+    }
+    
 }
