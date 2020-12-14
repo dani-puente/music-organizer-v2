@@ -111,4 +111,15 @@ public class MusicOrganizer
         }
 
     }
+
+    /**
+     * reproduzca los primeros segundos de todas las canciones de un determinado artista
+     */
+    public void playSamplesArtist(String artista){
+        for(String cancion : files){
+            if(cancion.contains(artista)){
+                player.playSample(cancion);
+            }
+        }
+    }
 }
