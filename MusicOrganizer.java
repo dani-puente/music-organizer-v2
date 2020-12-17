@@ -88,10 +88,11 @@ public class MusicOrganizer
      */
     public void listAllFiles(){
         int cont = 0;
-        for (String filename : files){
+        while(cont < files.size()){
+            String filename = files.get(cont);
+            System.out.println(filename);
             cont++;
-            System.out.println(cont + ": " + filename);
-        } 
+        }
     }
 
     /**
@@ -104,12 +105,11 @@ public class MusicOrganizer
                 siEsta = true;
                 System.out.println(filename);
             }
-            if(siEsta == false){
-                System.out.println("No hay un archivo con este nombre");
-            }
 
         }
-
+        if(siEsta == false){
+            System.out.println("No hay un archivo con este nombre");
+        }
     }
 
     /**
@@ -121,5 +121,12 @@ public class MusicOrganizer
                 player.playSample(cancion);
             }
         }
+    }
+
+    /**
+     * Borra todas las canciones del organizador que contengan el texto indicado usando un bucle for-each.
+     */
+    public void deleteSongsWithText(String textoABorrar){
+
     }
 }
