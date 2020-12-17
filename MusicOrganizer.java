@@ -90,7 +90,7 @@ public class MusicOrganizer
         int cont = 0;
         while(cont < files.size()){
             String filename = files.get(cont);
-            System.out.println(filename);
+            System.out.println((cont + 1) + ": " + filename);
             cont++;
         }
     }
