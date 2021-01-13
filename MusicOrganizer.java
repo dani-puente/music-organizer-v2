@@ -129,4 +129,29 @@ public class MusicOrganizer
     public void deleteSongsWithText(String textoABorrar){
 
     }
+
+    /**
+     * Localiza el índice del primer archivo que se corresponde con
+     * la cadena de búsqueda indicada .
+     * @param searchString La cadena que hay que buscar.
+     * @return El índice de la primera aparición o -1 si
+     * no se encuentra ninguna correspondencia
+     */
+    public int findFirst(String searchString){
+        String textoABuscar = searchString;
+        int index = 0;
+        int cont =0;
+        while(cont == 0 && index < files.size()){
+            String filename = files.get(index);
+            if(filename.contains(textoABuscar)){
+                cont++;
+            } else{
+                index++;
+            }
+        }
+        if(cont == 0){
+            index = -1;
+        }
+        return index;
+    }
 }
